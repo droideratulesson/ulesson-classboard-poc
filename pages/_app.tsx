@@ -10,8 +10,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <DefaultSeo
         title="ULesson Classboard Conference App"
         titleTemplate="%s"
-        defaultTitle="ULesson Classboard Conference app built with LiveKit open source"
-        description="LiveKit is an open source WebRTC project that gives you everything needed to build scalable and real-time audio and/or video experiences in your applications."
+        defaultTitle="ULesson Classboard Conference App"
+        description="uLesson classboard POC that implements Conference calling with gesture/face recognition using LiveKit open source."
         twitter={{
           handle: '@livekitted',
           site: '@livekitted',
