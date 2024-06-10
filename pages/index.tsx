@@ -43,9 +43,9 @@ function SmartBoardTab({ label }: { label: string }) {
   const [name, setName] = useState('');
 
   const onSelect = async (roomId: string) => {
-    let livekitUrl = 'https://livekit.bughandler.app';
+    let livekitUrl = 'https://livekit.bughandler.com';
     let request = await fetch(
-      `https://livekit-backend.bughandler.app/createToken?username=Smart%20Board&room=${roomId}`,
+      `https://livekit-backend.bughandler.com/createToken?username=Smart%20Board&room=${roomId}`,
     );
     let token = await request.text();
     router.push(`/custom/?liveKitUrl=${livekitUrl}&token=${token}`);
@@ -87,16 +87,16 @@ function AdminTab({ label }: { label: string }) {
   const [connectedSmartBoards, selectConnectedSmartBoards] = useState<string[]>([]);
 
   const onSelect = async (roomId: string) => {
-    let livekitUrl = 'https://livekit.bughandler.app';
+    let livekitUrl = 'https://livekit.bughandler.com';
     let request = await fetch(
-      `https://livekit-backend.bughandler.app/createToken?username=${name}&room=${roomId}`,
+      `https://livekit-backend.bughandler.com/createToken?username=${name}&room=${roomId}`,
     );
     let token = await request.text();
     router.push(`/custom/?liveKitUrl=${livekitUrl}&token=${token}&useMediaPipe=1`);
   };
 
   const loadConnectedSBs = async () => {
-    let request = await fetch('https://livekit-backend.bughandler.app/rooms');
+    let request = await fetch('https://livekit-backend.bughandler.com/rooms');
     let result = await request.text();
     let rooms = JSON.parse(result) as string[];
     selectConnectedSmartBoards(rooms);
