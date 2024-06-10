@@ -21,10 +21,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           url: 'https://meet.livekit.io',
           images: [
             {
-              url: 'https://meet.livekit.io/images/livekit-meet-open-graph.png',
+              url: 'https://ulesson-classboard-poc.vercel.app/images/livekit-meet-open-graph.jpeg',
               width: 2000,
               height: 1000,
-              type: 'image/png',
+              type: 'image/jpeg',
             },
           ],
           site_name: 'LiveKit Meet',
